@@ -211,10 +211,10 @@ $code.=<<___;
 	movdqa	`&Xi_off($i+14)`,$t1
 	pslld	\$14,$t3
 	pxor	$t2,$sigma
-	psrld	\$18-7,$t2
+	psrld	\$11,$t2
 	movdqa	$t1,$axb			# borrow $axb
 	pxor	$t3,$sigma
-	pslld	\$25-14,$t3
+	pslld	\$11,$t3
 	pxor	$t2,$sigma
 	psrld	\$10,$t1
 	movdqa	$axb,$t2
